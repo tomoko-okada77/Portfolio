@@ -1,0 +1,50 @@
+.header{
+  &-inner{
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    @include inner;
+    .logo{
+      @include text-large;
+    }
+    .menu-btn{
+      @include text-large;
+    }
+  }
+  &-nav{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: $lightgray;
+    @include text-large;
+  }
+  .nav-close{
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
+  .nav-wrap{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .nav-title{
+    padding: 0 6rem;
+    font-weight: bold;
+  }
+  .nav-menu{
+    padding: 0 6rem;
+    border-left: 1px solid $black;
+    li{
+      margin-bottom: 1rem;
+    }
+    a{
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}

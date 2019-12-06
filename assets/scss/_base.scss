@@ -1,0 +1,28 @@
+html{
+  font-size: 10px;
+}
+body {
+  background-color: $lightgray;
+  font-family: 'Vollkorn', "ヒラギノ明朝 ProN W6", "HiraMinProN-W6", serif;
+  color: $black;
+  font-feature-settings: "palt";
+  letter-spacing: 0.1em;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+  font-size: 1.2rem;
+  @include media-pc{
+    font-size: 1.6rem;
+  }
+}
+a{
+  color: $black;
+}
+
+.contents{
+  @include inner;
+  p{
+    @include sans-serif;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css?family=Vollkorn:400,700&display=swap');
