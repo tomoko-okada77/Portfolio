@@ -1,46 +1,76 @@
 .header{
   &-inner{
+    @include outer;
     padding: 1rem 0;
     display: flex;
     justify-content: space-between;
-    @include inner;
     .logo{
       @include text-large;
+      @include media-sp{
+        color: #fff;
+      } 
     }
     .menu-btn{
       @include text-large;
+      @include media-sp{
+        color: #fff;
+      } 
     }
   }
   &-nav{
-    display: none;
+    // display: none;
     width: 100vw;
     height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
-    background: $lightgray;
+    z-index: 9;
+    background: lighten($lightgray,2%);
     @include text-large;
+    // animation: slideDown both ease-out .2s;
   }
   .nav-close{
-    position: absolute;
-    top: 2rem;
-    right: 2rem;
+    @include outer;
+    padding-top: 1rem;
+    text-align: right;
+    position: relative;
+    z-index: 999;
+    cursor: pointer;
+    // position: absolute;
+    // top: 2rem;
+    // right: 2rem;
   }
   .nav-wrap{
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: -7rem;
   }
   .nav-title{
-    padding: 0 6rem;
+    padding: 0 4rem;
+    @include media-pc{
+      padding: 0 6rem;
+    }
     font-weight: bold;
   }
   .nav-menu{
-    padding: 0 6rem;
+    padding: 0 3rem;
+    @include media-pc{
+      padding: 0 6rem;
+    }
     border-left: 1px solid $black;
     li{
       margin-bottom: 1rem;
+      position: relative;
+      animation: slideToRight both ease-out;
+      animation-duration: .5s;
+      @for $i from 1 through 5{
+        &:nth-child(#{$i}){
+          animation-delay: $i * 30ms;
+        }
+      }
     }
     a{
       text-decoration: none;

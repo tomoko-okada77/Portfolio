@@ -1,11 +1,24 @@
-@mixin inner{
-  width: 90%;
-  max-width: 1280px;
-  margin: auto;
-}
 @mixin sans-serif{
   font-family: 'Quicksand', 'Source Sans Pro', 'Hiragino Kaku Gothic Pro', 'ヒラギノ角ゴ Pro W3', Meiryo, 'メイリオ', sans-serif;
 }
+
+@mixin outer{
+  width: 90%;
+  margin: auto;
+}
+
+@mixin inner{
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+}
+@mixin vertical-center{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
 // media PC
 @mixin media-pc($width-media:980px){
   @media only screen and (min-width:$width-media){
@@ -19,6 +32,10 @@
   }
 }
 @mixin text-large{
-  font-size: 3rem;
+  font-size: 2.6rem;
+  font-weight: bold;
+}
+@mixin text-medium{
+  font-size: 1.8rem;
   font-weight: bold;
 }

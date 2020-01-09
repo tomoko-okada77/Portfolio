@@ -1,3 +1,3 @@
 <template>
-	<footer class="footer">© my-portfolio.</footer>
+	<footer class="footer">© Tomoko Okada</footer>
 </template>

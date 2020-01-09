@@ -45,7 +45,7 @@ export default {
   ** Nuxt.js modules
   */
   modules: [
-    ['nuxt-sass-resources-loader', '~/assets/scss/_variables.scss']
+    ['nuxt-sass-resources-loader', '~/assets/scss/_variables.scss',, '~/assets/scss/_mixin.scss']
   ],
   /*
   ** Build configuration

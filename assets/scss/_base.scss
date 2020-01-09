@@ -1,3 +1,5 @@
+@import "_reset";
+
 html{
   font-size: 10px;
 }
@@ -9,19 +11,102 @@ body {
   letter-spacing: 0.1em;
   -webkit-tap-highlight-color: transparent;
   -webkit-text-size-adjust: 100%;
-  font-size: 1.2rem;
+  font-size: 1rem;
   @include media-pc{
     font-size: 1.6rem;
   }
 }
 a{
-  color: $black;
+  color: inherit;
 }
-
+.wrapper{
+  background: url(/bg_sp.jpg) no-repeat;
+  background-size: cover;
+  @include media-pc{
+    background: url(/bg_pc.jpg) no-repeat;
+    background-size: cover;
+  }
+}
 .contents{
-  @include inner;
+  min-height: 90vh;
+  position: relative;
+  // @include inner;
+  animation: slideToRight both ease-in-out 1s,
+             fadeIn both ease-in .8s;
   p{
     @include sans-serif;
+  }
+}
+.inner{
+  @include inner;
+  padding: 3% 5%;
+  background: rgba(#fff, .7);
+}
+.title{
+  margin: 2rem auto;
+  @include text-large;
+}
+.subtitle{
+  margin-bottom: 1rem;
+  @include text-medium;
+}
+.section{
+  margin-bottom: 2rem;
+}
+.heading{
+  margin-bottom: 2rem;
+  font-weight: bold;
+  @include sans-serif;
+}
+.btn{
+  margin: 3rem auto;
+  padding: 1rem 3rem;
+  background: $basecolor;
+  display: block;
+  border-radius: 3rem;
+  color: white;
+  font-size: 1.6rem;
+  cursor: pointer;
+  a{
+    text-decoration: none;
+  }
+}
+.text-left{
+  text-align: left;
+}
+
+//animation
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .6s ease;
+}
+.fade-enter, .fade-leave-to {
+  opacity: 0;
+}
+
+// @keyframes slideDown{
+//   from{
+//     top: -100vh;
+//   }
+//   to{
+//     top: 0;
+//   }
+// }
+
+@keyframes fadeIn{
+  from{
+    opacity: 0;
+  }
+  to{
+    opacity: 1;
+  }
+}
+@keyframes slideToRight{
+  from{
+    left: -1em;
+  }
+  to{
+    left: 0;
   }
 }
 

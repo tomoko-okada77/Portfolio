@@ -16,7 +16,16 @@
     components: {
       TheHeader,
       TheFooter
-    }
+    },
+    // el: '#header',
+    // data: {
+    //   isOn: false
+    // },
+		// methods: {
+		// 	toggleMenu: function () {
+		// 		this.isOn = !this.isOn
+		// 	}
+		// }
   }
 </script>
 
