@@ -1,5 +1,5 @@
 <template>
-  <members-only>
+  <!-- <members-only> -->
     <div class="container inner">
       <div>
         <h2 class="title">
@@ -14,7 +14,7 @@
         
       </div>
     </div>
-  </members-only>
+  <!-- </members-only> -->
 </template>
 
 <script>

@@ -1,5 +1,5 @@
 <template>
-  <members-only>
+  <!-- <members-only> -->
     <div class="container">
       <div class="main-copy">
           <transition-group tag="div" class="title" >
@@ -15,7 +15,7 @@
         </figcaption>
       </figure> -->
     </div>
-  </members-only>
+  <!-- </members-only> -->
 </template>
 
 <script>

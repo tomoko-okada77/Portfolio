@@ -1,5 +1,5 @@
 <template>
-  <members-only>
+  <!-- <members-only> -->
     <div class="container inner">
       <div>
         <h2 class="title">
@@ -22,7 +22,7 @@
         </form>
       </div>
     </div>
-  </members-only>
+  <!-- </members-only> -->
 </template>
 
 <script>

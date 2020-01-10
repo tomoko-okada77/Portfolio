@@ -1,7 +1,7 @@
 <template>
 	<div id="header" class="header">
 		<div class="header-inner">
-			<h1 class="logo">my-portfolio</h1>
+			<!-- <h1 class="logo">my-portfolio</h1> -->
 			<button v-on:click="toggleMenu" class="menu-btn">Menu</button>
 		</div>
 
