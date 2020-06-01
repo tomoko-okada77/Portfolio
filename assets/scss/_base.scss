@@ -30,7 +30,6 @@ a{
 .contents{
   min-height: 90vh;
   position: relative;
-  // @include inner;
   animation: slideToRight both ease-in-out 1s,
              fadeIn both ease-in .8s;
   p{
@@ -44,6 +43,9 @@ a{
 }
 .title{
   margin: 2rem auto;
+  padding: .5rem 1rem;
+  display: inline-block;
+  background: rgba(#000, .5);
   @include text-large;
 }
 .subtitle{
